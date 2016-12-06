@@ -1,0 +1,7 @@
+*/node-log.log
+!.gitignore
+dist/
+*.sublime-project
+*.sublime-workspace
+test_/*
+node_modules/*

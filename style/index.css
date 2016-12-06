@@ -1,0 +1,13 @@
+
+
+/*记得写宽高。。*/
+#qwe{
+    background-image: url(../img/1.jpg);/*3.2k*/
+    width: 100px;
+    height: 100px;
+}
+#asd{
+    background-image: url(../img/2.jpg);
+    width: 100px;
+    height: 100px;
+}

@@ -3,9 +3,10 @@
 <script>
     //es6
     import myComponent from './webComponet';
-    import  ComputeDd from './compute';
-    import  ListItem from './myList';
-    
+    import ComputeDd from './compute';
+    import ListItem from './myList';
+    import IfTest from './ifTest';
+    import event from './event'
 
     // 定义一个混合对象
     const myMixin = {
@@ -38,7 +39,9 @@
         components:{
            'my-component':myComponent,
            "my-compute":ComputeDd,
-           "my-list":ListItem
+           "my-list":ListItem,
+           "my-if":IfTest,
+           'my-event':event
         },
         events: {
             'child-msg': function (msg) {
@@ -59,9 +62,14 @@
     <p>Messages: {{ messages | json }}</p>
     <input v-model="parentMsg">
     <my-component msg="hello!" :my-message="parentMsg" v-bind:my-message2="parentMsg2"></my-component>
-
+    <hr>
     <my-compute></my-compute>
+    <hr>
     <my-list></my-list>
+    <hr>
+    <my-if></my-if>
+    <hr>
+    <my-event></my-event>
 </template>
 <style lang="sass">
     /*一定要加lang不然无法编译*/

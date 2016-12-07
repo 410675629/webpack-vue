@@ -31,10 +31,11 @@
         <button v-on:click="notify">Dispatch Event</button>
         <button v-on:child-msg="handleIt">Dispatch new Event</button>
     </div>
-
+    
+    <!-- 指令-->
     <div v-my-directive:hello.a.b="msg" ></div>
-
     <div v-my-directive="{ color: 'white', text: 'hello!' }" ></div>
+
 </template>
 <style lang="sass">
     /*一定要加lang不然无法编译*/

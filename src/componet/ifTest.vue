@@ -3,32 +3,32 @@
 <script>
     
     export default {
-        el:"#demo1",
+        el:"#demoIf",
          //data:function(){}，下面是es6写法
         data() {
             return{
-                firstName: 'Foo',
-                lastName: 'Bar',
-                a: 1
-            }
-        },
-        computed: {
-            fullName: function () {
-              return this.firstName + ' ' + this.lastName
-            },
-            b: function () {
-              // `this` 指向 vm 实例
-              return this.a + 1
+               ok:1
             }
         }
     }
 </script>
 <template>
-    <div>
-       <div id="demo1">
-       {{fullName}}
-        a={{ a }}, b={{ b }}
-       </div>
+    <div id="demoIf">
+       {{#if ok}}
+        <h1>Yes</h1>
+       {{/if}}
+
+      
+      <h1 v-if="ok">Yes</h1>
+      <h1 v-show="ok">Hello!</h1>
+    
+      <div v-if="Math.random() > 0.5">
+        Sorry
+      </div>
+      <div v-else>
+        Not sorry
+      </div>
+
     </div>
 
 </template>

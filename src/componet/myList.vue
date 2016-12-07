@@ -18,9 +18,11 @@
 <template>
   
   <ul id="example-1">
-    <li v-for="item in items">
-      {{ item.message }}
+    <li v-for="(index, item) in items">
+      {{index}}-{{ item.message }}
     </li>
   </ul>
+
+  <span v-for="n in 10">{{ n }} </span>
 
 </template>

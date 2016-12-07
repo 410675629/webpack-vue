@@ -1,5 +1,4 @@
 var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin')
 // NodeJS中的Path对象，用于处理目录的对象，提高开发效率。
 // 模块导入
 module.exports = {
@@ -61,14 +60,5 @@ module.exports = {
         }
     },
     // 开启source-map，webpack有多种source-map，在官网文档可以查到
-    devtool: 'eval-source-map',
-    plugins :[
-        /*new HtmlWebpackPlugin({
-            filename: './index.html',
-            template: path.resolve(__dirname, './dist/index.html'),
-            inject: true
-        })*/
-
-        new HtmlWebpackPlugin()
-    ]
+    devtool: 'eval-source-map'
 };

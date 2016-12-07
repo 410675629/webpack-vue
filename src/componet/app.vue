@@ -7,7 +7,7 @@
          //data:function(){}，下面是es6写法
          data () {
             return {
-                name:"guowenfh",
+                name:"zhangzhang",
                 age:"2q1"
             }
         }

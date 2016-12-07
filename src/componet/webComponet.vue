@@ -1,28 +1,22 @@
-
-
 <script>
+
     //es6
-    import myComponent from './webComponet';
     export default {
-        el:"#app",
+        el:"#test",
          //data:function(){}，下面是es6写法
          data () {
             return {
-                name:"zhangzhang",
-                age:"2q1"
+                name:"这是组件的引用",
+                age:"test"
             }
-        },
-        components:{
-           'my-component':myComponent
         }
     }
 </script>
 <template>
-    <div>
+    <div id="test">
         <h1>姓名：{{name}}</h1>
         <h2>{{age}}</h2>
     </div>
-    <my-component></my-component>
 </template>
 <style lang="sass">
     /*一定要加lang不然无法编译*/

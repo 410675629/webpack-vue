@@ -4,4 +4,5 @@ import Vue from "../node_modules/vue/dist/vue.min.js";//其实不用写完，会
 //引入我们编写的测试用vue文件。
 import app from './componet/app';
 Vue.config.debug = true;//开启错误提示
+
 new Vue(app);

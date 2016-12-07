@@ -4,6 +4,7 @@
     //es6
     import myComponent from './webComponet';
     import  ComputeDd from './compute';
+    import  ListItem from './myList';
     
 
     // 定义一个混合对象
@@ -36,7 +37,8 @@
         },
         components:{
            'my-component':myComponent,
-           "my-compute":ComputeDd
+           "my-compute":ComputeDd,
+           "my-list":ListItem
         },
         events: {
             'child-msg': function (msg) {
@@ -59,6 +61,7 @@
     <my-component msg="hello!" :my-message="parentMsg" v-bind:my-message2="parentMsg2"></my-component>
 
     <my-compute></my-compute>
+    <my-list></my-list>
 </template>
 <style lang="sass">
     /*一定要加lang不然无法编译*/
@@ -70,9 +73,6 @@
             background-color: #eee;
             color: red;
             transform: translate(10%, 10%);/*测试自动添加前缀*/
-        }
-        h1:hover{
-            height:100px;
         }
         h2{
             background-color: #999;

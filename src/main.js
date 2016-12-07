@@ -5,11 +5,20 @@ import Vue from "../node_modules/vue/dist/vue.min.js";//其实不用写完，会
 import app from './componet/app';
 Vue.config.debug = true;//开启错误提示
 
+// 为 `myOption` 自定义选项注入一个处理器
+Vue.mixin({
+  created: function () {
+    var myOption = this.$options.myOption
+    if (myOption) {
+      console.log(myOption)
+    }
+  }
+})
 
 //增加指令
 Vue.directive('my-directive', {
   bind: function () {
-  	console.log('demo bound!')
+  	console.log('my-directive begin!')
     // 准备工作
     // 例如，添加事件处理器或只需要运行一次的高耗任务
   },
